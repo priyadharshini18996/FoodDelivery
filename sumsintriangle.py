@@ -7,11 +7,11 @@ for i in range(no):
     
    lst.append(lst1)
 
-for j in range(no-1,-1,-1):
-     for k in range(j):
-             if lst[j][k]>lst[j][k+1]:
-                lst[j-1][k]+=lst[j][k]
+for row in range(no-1,-1,-1):
+     for column in range(row):
+             if lst[row][column]>lst[row][column+1]:
+                lst[row-1][column]+=lst[row][column]
              else:
-                lst[j-1][k]+=lst[j][k+1]
+                lst[row-1][column]+=lst[row][column+1]
 
 print("sums of triangle is =", (lst[0][0]))
